@@ -48,7 +48,7 @@ predicted = model.predict(np.array(wild_prediction).reshape(-1,1))
 print(f"Findings of {wild_prediction:.2f}cm belong to class {predicted}")
 
 # ~ Useful function ~
-# If we wanted to calculate the probability of this wild_prediction we defined.
+# If we wanted to calculate the probability of this wild_prediction we defined we would use this function.
 wild_prediction_probability = model.predict_proba(np.array(wild_prediction).reshape(-1, 1))
 
 # The probability for class 1 (ceramic) is in the second column (index 1)
