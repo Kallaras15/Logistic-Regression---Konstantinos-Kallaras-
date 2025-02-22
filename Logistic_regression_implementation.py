@@ -2,10 +2,6 @@
 #                       AI & ML in archaeology
 #                            2024 - 2025 
 # =============================================================================
-# Student Name: Konstantinos Kallaras (s4372603)
-# Email: k.c.kallaras@umail.leidenuniv.nl
-# =============================================================================
-#
 #
 # BASED on these sites: 
 # https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html
@@ -50,6 +46,15 @@ wild_prediction = 3.8463
 predicted = model.predict(np.array(wild_prediction).reshape(-1,1))
 
 print(f"Findings of {wild_prediction:.2f}cm belong to class {predicted}")
+
+# ~ Useful function ~
+# If we wanted to calculate the probability of this wild_prediction we defined.
+wild_prediction_probability = model.predict_proba(np.array(wild_prediction).reshape(-1, 1))
+
+# The probability for class 1 (ceramic) is in the second column (index 1)
+probability_of_ceramic = wild_prediction_probability[0, 1]
+
+print(f"The probability of being ceramic for the size {wild_prediction} cm is {probability_of_ceramic:.2f}")
 
 # =============================================================================
 # VISUALIZATION
