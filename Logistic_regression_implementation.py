@@ -69,7 +69,7 @@ plt.figure(figsize=(8, 5))
 sns.scatterplot(x=features, y= labels, color='orange', marker='o', label="Observations")
 
 # Plot logistic regression curve
-plt.plot(size_test, probabilities, color='blue', linewidth=2, label="Sigmoid Curve")
+plt.plot(size_test, probabilities, color='blue', linewidth=2, label="Sigmoid Function")
 
 # Formatting the plot
 plt.xlabel("Size")
